@@ -55,7 +55,7 @@ def main():
         else:
             st.write('High Risk')
 
-        # st.success(prediction)
+        st.success(prediction)
 
 if __name__ == '__main__':
     main()
