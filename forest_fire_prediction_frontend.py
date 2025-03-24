@@ -33,10 +33,6 @@ def main():
     with col1:
         fwi = st.number_input('FWI')
 
-    # Add other necessary input fields from the dataset
-    # For example, FFMC, DMC, etc. can be added similarly
-
-    # Create a dataframe for prediction
     input_data = pd.DataFrame({
         'Temperature': [temperature],
         'RH': [humidity],
@@ -50,9 +46,10 @@ def main():
         'FWI': [fwi]
     })
 
-    # Button to trigger the prediction
+
     if st.button('Predict'):
-        prediction = model.predict(input_data)  # Replace with your actual prediction code
+        prediction = model.predict(input_data)  
+        st.write(prediction)
         if prediction[0] == 0:
             st.write(f"Low Risk")
         elif prediction[0] == 1:
