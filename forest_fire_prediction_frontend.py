@@ -3,12 +3,10 @@ import pandas as pd
 import pickle
 from streamlit_option_menu import option_menu
 import numpy as np
-# import joblib
 
-# Load the model (ensure you have saved it as a .pkl file)
-model = pickle.load(open("forest_fire_predictor.pkl", 'rb'))  # Replace with your model file
 
-# Set up the Streamlit UI
+model = pickle.load(open("forest_fire_predictor.pkl", 'rb'))  
+
 def main():
     st.title('Forest Fire Prediction')
     col1, col2, col3 = st.columns(3)
@@ -48,7 +46,7 @@ def main():
 
 
     if st.button('Predict'):
-        prediction = model.predict(input_data)  
+        prediction = model.predict(np.array(input_data))  
         st.write(prediction)
         if prediction[0] == 0:
             st.write(f"Low Risk")
