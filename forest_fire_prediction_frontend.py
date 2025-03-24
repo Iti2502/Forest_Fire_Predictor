@@ -47,7 +47,7 @@ def main():
 
     if st.button('Predict'):
         prediction = model.predict(np.array(input_data))  
-        st.write(prediction)
+        # st.write(prediction)
         if prediction[0] == 0:
             st.write(f"Low Risk")
         elif prediction[0] == 1:
