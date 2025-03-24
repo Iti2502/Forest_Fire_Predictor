@@ -6,7 +6,7 @@ import numpy as np
 # import joblib
 
 # Load the model (ensure you have saved it as a .pkl file)
-model = pickle.load(open("C:/Users/itish/PycharmProjects/Forest Fire Prediction/forest_fire_predictor.pkl", 'rb'))  # Replace with your model file
+model = pickle.load(open("forest_fire_predictor.pkl", 'rb'))  # Replace with your model file
 
 # Set up the Streamlit UI
 def main():
