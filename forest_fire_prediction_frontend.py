@@ -11,25 +11,25 @@ def main():
     st.title('Forest Fire Prediction')
     col1, col2, col3 = st.columns(3)
     with col1:
-        temperature = st.number_input('Temperature (°C)', min_value=0, value=30)
+        temperature = st.number_input('Temperature (°C)', min_value=0.0, value=30.0)
     with col2:
-        humidity = st.number_input('Relative Humidity (%)', min_value=0, max_value=100, value=50)
+        humidity = st.number_input('Relative Humidity (%)', min_value=0.0, value=57.0)
     with col3:
-        wind_speed = st.number_input('Wind Speed (km/h)', min_value=0, max_value=100, value=20)
+        wind_speed = st.number_input('Wind Speed (km/h)', min_value=0.0, value=18.0)
     with col1:
-        rain = st.number_input('Rain (mm)', min_value=0.0, max_value=100.0, value=0.0)
+        rain = st.number_input('Rain (mm)', min_value=0.0, value=0.0)
     with col2:
-        ffmc = st.number_input('FFMC')
+        ffmc = st.number_input('FFMC', min_value=0.0, value=65.7)
     with col3:
-        dmc = st.number_input('DMC')
+        dmc = st.number_input('DMC', min_value=0.0, value=3.4)
     with col1:
-        dc = st.number_input('DC')
+        dc = st.number_input('DC', min_value=0.0, value=7.6)
     with col2:
-        isi = st.number_input('ISI')
+        isi = st.number_input('ISI', min_value=0.0, value=1.3)
     with col3:
-        bui = st.number_input('BUI')
+        bui = st.number_input('BUI', min_value=0.0, value=3.4)
     with col1:
-        fwi = st.number_input('FWI')
+        fwi = st.number_input('FWI', min_value=0.0, value=0.5)
 
     input_data = pd.DataFrame({
         'Temperature': [temperature],
